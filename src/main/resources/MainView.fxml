@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXRippler?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.TabPane?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import javafx.scene.control.ToggleButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.ListView?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.control.TreeTableView?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import com.jfoenix.controls.JFXTreeTableColumn?>
+<?import javafx.scene.control.ColorPicker?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import javafx.scene.control.DatePicker?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.jfoenix.controls.JFXSnackbar?>
+<VBox xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/css/main.css" />
+    </stylesheets>
+    <TabPane>
+        <tabs>
+            <Tab text="Labels">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
+                    <Text>JavaFX Text</Text>
+                    <Label>JavaFX Label</Label>
+                    <JFXRippler>
+                        <Label>JFXRippler Text</Label>
+                    </JFXRippler>
+                </VBox>
+            </Tab>
+            <Tab text="Buttons">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
+                    <Button>JavaFX Button</Button>
+                    <JFXButton>JFXButton</JFXButton> <CheckBox>JavaFX Checkbox</CheckBox>
+                    <JFXCheckBox>JFXCheckbox</JFXCheckBox>
+                    <RadioButton text="JavaFX Radio Button 1">
+                        <toggleGroup>
+                            <ToggleGroup fx:id="radioButton1"/>
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton text="JavaFX Radio Button 2" toggleGroup="$radioButton1"/>
+                    <RadioButton text="JavaFX Radio Button 3" toggleGroup="$radioButton1"/>
+                    <JFXRadioButton text="JFXRadioButton 1">
+                        <toggleGroup>
+                            <ToggleGroup fx:id="radioButton2"/>
+                        </toggleGroup>
+                    </JFXRadioButton>
+                    <JFXRadioButton text="JFXRadioButton 2" toggleGroup="$radioButton2"/>
+                    <JFXRadioButton text="JFXRadioButton 3" toggleGroup="$radioButton2"/>
+                    <ToggleButton>JavaFX Toggle Button</ToggleButton>
+                    <JFXToggleButton>JFXToggleButton</JFXToggleButton>
+                </VBox>
+            </Tab>
+            <Tab text="ComboBox">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
+                    <ComboBox>
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="JavaFX ComboBox 1" />
+                                <String fx:value="JavaFX ComboBox 2" />
+                                <String fx:value="JavaFX ComboBox 3" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                    <JFXComboBox>
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="JFXComboBox 1" />
+                                <String fx:value="JFXComboBox 2" />
+                                <String fx:value="JFXComboBox 3" />
+                            </FXCollections>
+                        </items>
+                    </JFXComboBox>
+                </VBox>
+            </Tab>
+            <Tab text="Hamburgers">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
+                    <JFXHamburger>
+                    </JFXHamburger>
+                </VBox>
+            </Tab>
+            <Tab text="Input Fields">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
+                    <TextField>JavaFX Text</TextField>
+                    <JFXTextField>JFXTextField</JFXTextField>
+                    <TextArea>JavaFX TextArea</TextArea>
+                    <JFXTextArea>JFXTextArea</JFXTextArea>
+                </VBox>
+            </Tab>
+            <Tab text="Progress Bar">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
+                    <ProgressBar progress="0.3" />
+                    <JFXProgressBar progress="0.3" />
+                    <ProgressBar progress="0.7" />
+                    <JFXProgressBar progress="0.7" />
+                    <ProgressBar progress="-1.0" />
+                    <JFXProgressBar progress="-1.0" />
+                </VBox>
+            </Tab>
+            <Tab text="Slider">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
+                    <Slider/>
+                    <JFXSlider/>
+                </VBox>
+            </Tab>
+            <Tab text="Spinner">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
+                    <JFXSpinner/>
+                </VBox>
+            </Tab>
+            <Tab text="Tabs">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
+                    <JFXTabPane>
+                        <Tab text="Tab 1">
+                            <VBox spacing="10">
+                                <Label>Content 1</Label>
+                            </VBox>
+                        </Tab>
+                        <Tab text="Tab 2">
+                            <VBox spacing="10">
+                                <Label>Content 2</Label>
+                            </VBox>
+                        </Tab>
+                    </JFXTabPane>
+                </VBox>
+            </Tab>
+            <Tab text="List Views">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
+                    <ListView>
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="JavaFX ListView 1" />
+                                <String fx:value="JavaFX ListView 2" />
+                                <String fx:value="JavaFX ListView 3" />
+                            </FXCollections>
+                        </items>
+                    </ListView>
+                    <JFXListView>
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="JavaFX ListView 1" />
+                                <String fx:value="JavaFX ListView 2" />
+                                <String fx:value="JavaFX ListView 3" />
+                            </FXCollections>
+                        </items>
+                    </JFXListView>
+                </VBox>
+            </Tab>
+            <Tab text="Tree Table View">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
+                    <TreeTableView>
+                        <columns>
+                            <TreeTableColumn text="JavaFX TreeTableColumn 1"/>
+                            <TreeTableColumn text="JavaFX TreeTableColumn 2"/>
+                            <TreeTableColumn text="JavaFX TreeTableColumn 3"/>
+                        </columns>
+                    </TreeTableView>
+                    <JFXTreeTableView>
+                        <columns>
+                            <JFXTreeTableColumn text="JFXTreeTableColumn 1"/>
+                            <JFXTreeTableColumn text="JFXTreeTableColumn 2"/>
+                            <JFXTreeTableColumn text="JFXTreeTableColumn 3"/>
+                        </columns>
+                    </JFXTreeTableView>
+                </VBox>
+            </Tab>
+            <Tab text="Pickers">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
+                    <DatePicker/>
+                    <JFXDatePicker/>
+                    <JFXTimePicker/>
+                    <ColorPicker/>
+                    <JFXColorPicker/>
+                </VBox>
+            </Tab>
+            <Tab text="Dialogs">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
+                    <Button onAction="#openJavaFXDialog">Open JavaFX Dialog</Button>
+                    <JFXButton onAction="#openJFXDialog">Open JFXDialog</JFXButton>
+                </VBox>
+            </Tab>
+            <Tab text="Popup">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
+                </VBox>
+            </Tab>
+            <Tab text="Drawer">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
+                </VBox>
+            </Tab>
+            <Tab text="Decorator">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
+                </VBox>
+            </Tab>
+            <Tab text="Masonry">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
+                    <JFXMasonryPane/>
+                </VBox>
+            </Tab>
+            <Tab text="Badge">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
+                </VBox>
+            </Tab>
+            <Tab text="SnackBar">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
+                    <JFXSnackbar/>
+                </VBox>
+            </Tab>
+        </tabs>
+    </TabPane>
+</VBox>
